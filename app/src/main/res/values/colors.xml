@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red">#A70F16</color>
+    <color name="red_light">#D3878A</color>
+    <color name="red_soft_light">#F7E9E9</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_drawer">#451815</color>
+    <color name="black_transparent">#80000000</color>
+    <color name="grey">#4A4A4A</color>
+    <color name="grey_light">#B7B7B7</color>
+    <color name="grey_pop_up">#666666</color>
+    <color name="grey_divider">#B8C5CB</color>
+    <color name="grey_tab">#979797</color>
+    <color name="grey_item">#858585</color>
+    <color name="grey_bar">#D8D8D8</color>
+
+    <color name="green">#0F9D58</color>
+
+    <color name="yelow">#F5B400</color>
+
+    <color name="transparente">#00FFFFFF</color>
+    <color name="pink_light">#F5F5F5</color>
+
+    <color name="black_action_bar">#6D1B19</color>
+
+    <color name="green_dark">#278E88</color>
+    <color name="green_light">#33b7b0</color>
+    <color name="green_xlight">#3bd4cc</color>
+    <color name="green_xlight_transparente">#803bd4cc</color>
+
+    <color name="green_item">#199000</color>
+    <color name="yelow_light">#B89C00</color>
+    <color name="blue">#0641D6</color>
+
+</resources>

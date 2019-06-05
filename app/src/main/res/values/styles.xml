@@ -1,0 +1,244 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here.
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorPrimaryDark">@color/black</item>
+    </style>
+
+    <style name="font_size_small">
+        <item name="android:textSize">@dimen/size_font_small</item>
+        <item name="android:textColor">@color/grey</item>
+
+    </style>
+
+    <style name="font_size_medio">
+        <item name="android:textSize">@dimen/size_font_medio</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+    <style name="font_size_large">
+        <item name="android:textSize">@dimen/size_font_large</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="font_size_xlarge">
+        <item name="android:textSize">@dimen/size_font_xlarge</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_size_xlarge_blod" parent="font_size_xlarge">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="font_size_medio_bold" parent="font_size_medio">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="font_size_small_bold" parent="font_size_small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="hover_background_red" parent="@style/font_size_medio">
+        <item name="android:background">@drawable/hover_background_red</item>
+    </style>
+
+    <style name="style_button_login" parent="@style/hover_background_red">
+        <item name="android:text">@string/name_button_init_sesion</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_btn_pop_up" parent="font_size_small_bold">
+        <item name="android:paddingTop">@dimen/margin_general</item>
+        <item name="android:paddingBottom">@dimen/margin_general</item>
+        <item name="android:paddingLeft">7dp</item>
+        <item name="android:paddingRight">7dp</item>
+        <item name="android:textColor">@color/grey_pop_up</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+
+    </style>
+
+    <style name="style_button_positive_dialog" parent="@style/style_btn_pop_up">
+        <item name="android:textColor">@drawable/background_button_positive</item>
+        <!--<item name="android:background">@drawable/hover_background_button_positive</item>-->
+
+    </style>
+
+    <style name="style_button_negative_dialog" parent="@style/style_btn_pop_up">
+        <item name="android:textColor">@drawable/background_button_negative</item>
+        <!--<item name="android:background">@drawable/hover_background_button_negative</item>-->
+
+    </style>
+
+    <style name="style_list_view_black"  >
+        <item name="background">@color/black</item>
+        <item name="android:listSelector">@drawable/background_item_drawer</item>
+    </style>
+
+
+    <style name="style_tab_view_selected" parent="@style/font_size_medio_bold">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:background">@drawable/background_button_tab_selected</item>
+    </style>
+
+    <style name="style_tab_view" parent="@style/font_size_medio_bold">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/background_button_tab</item>
+
+    </style>
+
+    <style name="style_custom_bar_horizontal"  >
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_horizontal_grey_black</item>
+        <item name="android:layout_marginBottom">@dimen/margin_general</item>
+
+        <item name="android:minHeight">30dip</item>
+        <item name="android:maxHeight">40dip</item>
+    </style>
+
+
+    <style name="css_input_text">
+        <item name="android:layout_marginTop">@dimen/margin_input</item>
+        <item name="android:textAppearance">@style/font_size_medio</item>
+        <item name="android:paddingLeft">@dimen/padding_horizontal_input</item>
+        <item name="android:paddingRight">@dimen/padding_vertical_input</item>
+        <item name="android:background">@drawable/input_text_border_bottom</item>
+        <item name="android:layout_height">@dimen/height_spinner</item>
+    </style>
+
+    <style name="css_area_text">
+        <item name="android:layout_marginTop">@dimen/margin_input</item>
+        <item name="android:textAppearance">@style/font_size_medio</item>
+        <item name="android:paddingLeft">@dimen/padding_horizontal_input</item>
+        <item name="android:paddingRight">@dimen/padding_vertical_input</item>
+        <item name="android:background">@drawable/input_text_border_bottom</item>
+        <item name="android:layout_height">@dimen/height_area</item>
+    </style>
+
+    <style name="css_label">
+        <item name="android:layout_marginTop">@dimen/margin_top_label</item>
+        <item name="android:textAppearance">@style/font_size_medio_bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="css_label_section">
+        <item name="android:layout_marginTop">@dimen/margin_top_label</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_font_xlarge</item>
+    </style>
+
+    <style name="css_row_header">
+        <item name="android:layout_marginTop">@dimen/margin_top_label</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="css_row_left">
+        <item name="android:layout_marginTop">@dimen/margin_top_label</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+
+    <style name="css_row_title_section">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="css_spinner">
+        <item name="android:layout_height">@dimen/height_spinner</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/margin_input</item>
+        <item name="android:background">@drawable/spinner_row_title</item>
+    </style>
+
+
+    <style name="lbl_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding"> @dimen/margin_general </item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAppearance">@style/font_size_medio</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@color/grey</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="lbl_formulario">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_general</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAppearance">@style/font_size_medio_bold</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="row_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_general</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAppearance">@style/font_size_medio</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="row_subtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_general</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAppearance">@style/font_size_small</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/green_dark</item>
+    </style>
+
+    <style name="lbl_sep_question">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin_general</item>
+        <item name="android:paddingTop">@dimen/margin_general</item>
+        <item name="android:paddingBottom">@dimen/margin_general</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:textAppearance">@style/font_size_medio</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@color/red_soft_light</item>
+    </style>
+
+    <style name="txt_formulario">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_input_text</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:layout_marginBottom">@dimen/margin_general</item>
+        <item name="android:layout_marginLeft">@dimen/margin_general</item>
+        <item name="android:background">@drawable/input_text_border_bottom</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:lines">1</item>
+        <item name="android:paddingLeft">@dimen/padding_horizontal_input</item>
+        <item name="android:paddingTop">@dimen/padding_horizontal_input</item>
+        <item name="android:textAppearance">@style/font_size_medio</item>
+    </style>
+
+    <style name="row_question">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop"> @dimen/margin_general </item>
+        <item name="android:paddingBottom"> @dimen/margin_general </item>
+        <item name="android:layout_marginBottom">@dimen/margin_general</item>
+        <item name="android:background"> @drawable/bottom_line </item>
+    </style>
+</resources>

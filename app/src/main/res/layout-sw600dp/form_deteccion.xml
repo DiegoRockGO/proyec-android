@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_deteccion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:fragmentActivity="com.uy.csi.sige.FormEventActivity"
+    tools:showIn="@layout/form_event">
+
+    <TextView
+        style="@style/lbl_divider"
+        android:text="@string/lbl_inf_gen"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_general"
+        android:layout_marginRight="@dimen/margin_general"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:text="@string/lbl_padrones" />
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:text="@string/lbl_nro_referencia" />
+            </TableRow>
+
+            <TableRow>
+                <EditText android:id="@+id/txtPadrones" android:inputType="number" style="@style/txt_formulario" />
+                <EditText android:id="@+id/txtNroReferencia" style="@style/txt_formulario" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:text="@string/lbl_regimen" />
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:text="@string/lbl_area_terreno" />
+            </TableRow>
+
+            <TableRow>
+                <EditText android:id="@+id/txtRegimen" style="@style/txt_formulario" />
+                <EditText android:id="@+id/txtAreaTerreno" android:inputType="numberDecimal" style="@style/txt_formulario" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:text="@string/lbl_departamento" />
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:text="@string/lbl_area_edificada" />
+            </TableRow>
+            <TableRow>
+                <Spinner android:id="@+id/spnDepartamento" style="@style/txt_formulario" />
+                <EditText android:id="@+id/txtAreaEdificada" android:inputType="numberDecimal" style="@style/txt_formulario" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:layout_span="2"
+                    android:text="@string/lbl_localidad_barrio" />
+            </TableRow>
+            <TableRow>
+                <EditText
+                    android:id="@+id/txtLocalidad"
+                    android:layout_span="2"
+                    style="@style/txt_formulario" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    style="@style/lbl_formulario"
+                    android:layout_span="2"
+                    android:text="@string/lbl_direccion" />
+            </TableRow>
+
+            <TableRow>
+                <EditText
+                    android:id="@+id/txtUnidad"
+                    android:layout_span="2"
+                    style="@style/txt_formulario" />
+            </TableRow>
+
+            <TableRow>
+                <TextView style="@style/lbl_formulario" android:text="@string/lbl_esquina" />
+                <TextView style="@style/lbl_formulario" android:text="@string/lbl_unidad" />
+            </TableRow>
+
+            <TableRow>
+                <EditText android:id="@+id/txtDireccion"  style="@style/txt_formulario" />
+                <EditText android:id="@+id/txtEsquina"  style="@style/txt_formulario" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/lbl_divider"
+        android:text="@string/lbl_inf_const"/>
+
+    <Button
+        android:id="@+id/btnAddContruccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/lbl_add_constr"/>
+
+
+    <ListView
+        android:id="@+id/lv_construccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:scrollingCache="false"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="false" />
+
+    <TextView
+        style="@style/lbl_divider"
+        android:text="@string/lbl_inf_insp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow style="@style/lbl_sep_question">
+            <TextView style="@style/lbl_formulario" android:text="@string/lbl_vis_int_inm" />
+            <Switch android:id="@+id/swVisitaInmueble"  />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/lyVisita"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_categoria" />
+        <Spinner style="@style/txt_formulario" android:id="@+id/spnCategoriaInmueble"  />
+
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_descripcion" />
+        <EditText android:id="@+id/txtDescripcionCategoria" style="@style/txt_formulario" />
+
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_estado" />
+        <Spinner style="@style/txt_formulario" android:id="@+id/spnEstadoInmueble"/>
+
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_descripcion" />
+        <EditText android:id="@+id/txtDescripcionEstado" style="@style/txt_formulario" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow style="@style/lbl_sep_question">
+            <TextView style="@style/lbl_formulario" android:text="@string/lbl_reformas" />
+            <Switch android:id="@+id/swReformas"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/lyReformas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_area" />
+        <EditText android:id="@+id/txtAreaAproximadaReforma" style="@style/txt_formulario" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow style="@style/lbl_sep_question">
+            <TextView style="@style/lbl_formulario" android:text="@string/lbl_patologias" />
+            <Switch android:id="@+id/swPatologias"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lyPatlogia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow style="@style/row_question">
+                <TextView style="@style/lbl_formulario" android:text="@string/lbl_humedades" />
+                <Switch android:id="@+id/swHumedadesPatologias"/>
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_descripcion" />
+        <EditText  android:id="@+id/txtDescripcionHumedadesPatologias" style="@style/txt_formulario" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+            <TableRow style="@style/row_question">
+                <TextView style="@style/lbl_formulario" android:text="@string/lbl_grietas" />
+                <Switch android:id="@+id/swGrietasHumedades"/>
+            </TableRow>
+        </TableLayout>
+
+
+
+        <TextView style="@style/lbl_formulario" android:text="@string/lbl_descripcion" />
+        <EditText android:id="@+id/txtDescripcionGrietasHumedades" style="@style/txt_formulario" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+        <TableRow style="@style/lbl_sep_question">
+            <TextView style="@style/lbl_formulario" android:text="@string/lbl_inst_func" />
+        </TableRow>
+        <TableRow style="@style/row_question">
+            <TextView style="@style/lbl_formulario" android:text="@string/lbl_sanitarias" />
+            <Switch android:id="@+id/swInstSanitaria" android:layout_height="wrap_content" android:layout_width="wrap_content" />
+        </TableRow>
+        <TableRow style="@style/row_question">
+            <TextView style="@style/lbl_formulario" android:text="@string/lbl_electrica" />
+            <Switch android:id="@+id/swInstElectrica" android:layout_height="wrap_content" android:layout_width="wrap_content" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView style="@style/lbl_formulario" android:text="@string/lbl_observaciones" />
+    <EditText android:id="@+id/txtObservacionesGenerales" style="@style/txt_formulario" />
+
+</LinearLayout>

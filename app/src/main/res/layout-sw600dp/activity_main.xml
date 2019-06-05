@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_login" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/black_transparent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_bottom_screen_large">
+
+                <ImageView
+                    android:id="@+id/icon_splash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:scaleType="center"
+                    android:src="@mipmap/rank" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"
+                android:layout_marginTop="@dimen/margin_padding_general"
+                android:layout_marginLeft="@dimen/margin_padding_general"
+                android:layout_marginRight="@dimen/margin_padding_general"
+                android:layout_marginBottom="@dimen/margin_padding_general"
+                android:orientation="vertical" >
+
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/field_set_white"
+                    android:layout_marginBottom="@dimen/margin_general"
+                    android:stretchColumns="*" >
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/txt_usuario"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/height_input_text"
+                            android:background="@drawable/input_text_wite_margin"
+                            android:hint="@string/name_usuario"
+                            android:paddingLeft="@dimen/margin_general"
+                            android:paddingRight="@dimen/margin_general"
+                            android:textAppearance="@style/font_size_medio"
+                            android:textColorHint="@color/grey"
+                            android:inputType="text"
+                            android:imeOptions="actionNext"/>
+                    </TableRow>
+
+                    <TableRow>
+
+                        <View
+                            android:id="@+id/line_div_buttons"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/margin_general"
+                            android:layout_marginRight="@dimen/margin_general"
+                            android:background="@color/grey" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <EditText
+                            android:id="@+id/txt_clave"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_input_text"
+                            android:background="@drawable/input_text_wite_margin"
+                            android:hint="@string/name_clave"
+                            android:inputType="textPassword"
+                            android:paddingLeft="@dimen/margin_general"
+                            android:paddingRight="@dimen/margin_general"
+                            android:textAppearance="@style/font_size_medio"
+                            android:textColorHint="@color/grey" />
+                    </TableRow>
+                </TableLayout>
+
+
+                <Button
+                    android:id="@+id/btn_ingresar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginBottom="@dimen/margin_general"
+                    android:layout_gravity="center"
+                    style="@style/style_button_login"/>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

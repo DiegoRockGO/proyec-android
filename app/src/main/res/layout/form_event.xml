@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:keepScreenOn="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:background="@drawable/background_action_bar"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_back_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/hover_button_back"
+                    android:contentDescription="@string/name_img"
+                    android:gravity="left" />
+
+
+
+
+                <TextView
+                    android:id="@+id/lbl_title_event"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="0.01"
+                    android:layout_gravity="left|center_vertical"
+                    android:textAppearance="@style/font_size_small"
+                    android:textColor="@color/white" />
+
+
+
+            </LinearLayout>
+
+            <include  layout="@layout/form_obra"  />
+            <include  layout="@layout/form_deteccion" />
+
+            <!-- aqui foto-->
+            <TextView
+                style="@style/lbl_divider"
+                android:text="@string/lbl_rep_fot"/>
+
+            <LinearLayout
+                xmlns:widget="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_general"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:layout_marginRight="@dimen/margin_general"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.uy.csi.sige.widget.HorizontalListView
+                        android:id="@+id/hlv"
+                        android:layout_width="0dp"
+                        android:layout_weight=".05"
+                        android:layout_height="160dp"
+                        android:background="@color/white"
+                        android:divider="@color/white"
+                        android:fadingEdgeLength="5dp"
+                        android:requiresFadingEdge="horizontal"
+                        widget:dividerWidth="1dp"
+                        android:layout_gravity="center"   />
+
+
+                    <ImageButton
+                        android:id="@+id/button_add_picture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="@dimen/margin_general"
+                        android:layout_marginLeft="@dimen/margin_general"
+                        android:background="@drawable/hover_button_add_picture"
+                        android:contentDescription="@string/name_img" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/button_save_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/margin_padding_general"
+        android:layout_marginRight="@dimen/margin_padding_general"
+        android:background="@drawable/hover_button_save_event"
+        android:contentDescription="@string/name_img" />
+
+</FrameLayout>

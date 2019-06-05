@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@string/name_fecha_init"
+        android:layout_width="match_parent"
+        style="@style/css_label" />
+    <EditText
+        android:id="@+id/txtFecha"
+        android:imeOptions="actionNext"
+        android:maxLength="100"
+        android:lines="1"
+        android:layout_width="match_parent"
+        style="@style/css_input_text" />
+
+    <TextView
+        android:text="@string/name_ubicacion"
+        android:layout_width="match_parent"
+        style="@style/css_label" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <Spinner
+                android:id="@+id/lstDepartment"
+                style="@style/css_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_spinner"
+                android:layout_marginRight="5dp"
+                android:prompt="@string/name_dpto" />
+            <Spinner
+                android:id="@+id/lstCiudad"
+                style="@style/css_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_spinner"
+                android:layout_marginRight="5dp"
+                android:prompt="@string/name_citie"/>
+            <Spinner
+                android:id="@+id/lstSector"
+                style="@style/css_input_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_spinner"
+                android:prompt="@string/name_sector"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <EditText
+                android:id="@+id/txtOtraCiudad"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:lines="1"
+                android:hint="@string/hint_otra_ciudad"
+                android:layout_width="match_parent"
+                android:layout_span="3"
+                android:layout_marginRight="5dp"
+                style="@style/css_input_text" />
+        </TableRow>
+
+
+        <TableRow>
+            <EditText
+                android:id="@+id/txtCalle"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:lines="1"
+                android:hint="@string/name_stree"
+                android:layout_width="match_parent"
+                android:layout_span="2"
+                android:layout_marginRight="5dp"
+                style="@style/css_input_text" />
+            <EditText
+                android:id="@+id/txtNumero"
+                android:imeOptions="actionNext"
+                android:maxLength="100"
+                android:lines="1"
+                android:layout_width="match_parent"
+                android:hint="@string/name_number"
+                android:inputType="number"
+                style="@style/css_input_text" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/txtReferencia"
+        android:imeOptions="actionNext"
+        android:maxLength="100"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:hint="@string/name_ref"
+        style="@style/css_input_text" />
+
+</LinearLayout>

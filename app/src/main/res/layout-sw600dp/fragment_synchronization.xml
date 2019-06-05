@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_padding_general"
+        android:layout_marginTop="@dimen/margin_padding_general"
+        android:layout_marginRight="@dimen/margin_padding_general"
+        android:layout_marginLeft="@dimen/margin_padding_general"
+        android:background="@drawable/field_set_grey"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_general"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginBottom="@dimen/margin_general"
+            android:layout_marginTop="@dimen/margin_general"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:drawableLeft="@mipmap/icon_sincronizar_file_600"
+                android:drawablePadding="8dp"
+                android:gravity="left|center_vertical"
+                android:text="@string/titulo_file_sincro"
+                android:textAppearance="@style/font_size_medio_bold"
+                android:textColor="@color/red" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/number_deteccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginRight="3dp"
+                    android:drawableLeft="@mipmap/icon_deteccion_600"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center_vertical"
+                    android:textAppearance="@style/font_size_medio"  />
+
+                <TextView
+                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginRight="@dimen/margin_general"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/name_send_deteccion"
+                    android:textAppearance="@style/font_size_medio"  />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/number_obra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginRight="3dp"
+                    android:drawableLeft="@mipmap/icon_obra_600"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center_vertical"
+                    android:textAppearance="@style/font_size_medio"  />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginRight="@dimen/margin_general"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/name_send_obra"
+                    android:textAppearance="@style/font_size_medio"  />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/number_images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginRight="3dp"
+                    android:drawableLeft="@mipmap/icon_picture_600"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center_vertical"
+                    android:textAppearance="@style/font_size_medio"  />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_general"
+                    android:layout_marginRight="@dimen/margin_general"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/name_send_image"
+                    android:textAppearance="@style/font_size_medio"  />
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/lbl_msg_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_general"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:layout_marginRight="@dimen/margin_general"
+                android:gravity="left|center_vertical"
+                android:textAppearance="@style/font_size_small"
+                android:textColor="@color/grey" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar_sincro"
+                style="@style/style_custom_bar_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_progress_bar"
+                android:layout_marginRight="@dimen/margin_general"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/lbl_progress_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:layout_marginRight="@dimen/margin_general"
+                android:layout_marginLeft="@dimen/margin_general"
+                android:textAppearance="@style/font_size_medio"
+                android:textColor="@color/grey" />
+
+            <Button
+                android:id="@+id/btnDescargar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descargar Base Datos"
+                android:onClick="downloadDB"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="@dimen/margin_padding_general"
+        android:background="@drawable/hover_button_send"
+        android:contentDescription="@string/name_img" />
+
+    <ImageButton
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginLeft="@dimen/margin_padding_general"
+        android:layout_marginBottom="@dimen/margin_padding_general"
+        android:background="@drawable/hover_button_cancel"
+        android:contentDescription="@string/name_img" />
+
+
+</FrameLayout>

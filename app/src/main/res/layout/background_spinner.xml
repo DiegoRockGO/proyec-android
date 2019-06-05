@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_light"
+    android:paddingLeft="10dp"
+    android:singleLine="true"
+    android:layout_gravity="left|center_vertical"
+    android:gravity="left|center_vertical"
+    android:ellipsize="marquee"
+    android:drawableRight="@mipmap/icon_drop"
+    android:drawablePadding ="10dp"
+    android:textAppearance="@style/font_size_medio"/>

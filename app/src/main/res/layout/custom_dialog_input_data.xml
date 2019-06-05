@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:keepScreenOn="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red">
+
+        <ImageView
+            android:id="@+id/img_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_general"
+            android:layout_marginBottom="@dimen/margin_general"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:contentDescription="@string/name_img"
+            android:src="@drawable/img_dialog_msg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_general"
+        android:layout_marginBottom="@dimen/margin_general"
+        android:layout_marginLeft="@dimen/margin_general"
+        android:layout_marginRight="@dimen/margin_general"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txt_titulo_input_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="@dimen/margin_general"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:textAppearance="@style/font_size_medio_bold"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/txt_msg_input_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="@dimen/margin_general"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:textAppearance="@style/font_size_medio"
+            android:textColor="@color/black" />
+
+
+
+        <EditText
+            android:id="@+id/txt_input_data_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_input_dialog"
+
+            android:background="@drawable/input_text_border_bottom"
+            android:layout_marginTop="@dimen/margin_general"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:paddingLeft="@dimen/padding_horizontal_input"
+            android:inputType="textMultiLine"
+            android:textAppearance="@style/font_size_medio"
+            android:maxLength="600"/>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/line_div"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin_general"
+        android:layout_marginRight="@dimen/margin_general"
+        android:background="@drawable/background_line" />
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_general"
+        android:layout_marginRight="@dimen/margin_general"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_close_input_data"
+            style="@style/style_button_negative_dialog"
+            android:layout_width="0dp"
+            android:layout_weight="0.05"
+            android:layout_height="wrap_content"  />
+
+        <View
+            android:id="@+id/line_div_button"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_line" />
+
+
+        <Button
+            android:id="@+id/btn_aceptar_input_data"
+            style="@style/style_button_positive_dialog"
+            android:layout_width="0dp"
+            android:layout_weight="0.05"
+            android:layout_height="wrap_content"  />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/grey_divider" />
+        </shape>
+    </item>
+    <item android:bottom="@dimen/height_border_edit_text">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/pink_light" />
+        </shape>
+    </item>
+
+</layer-list>

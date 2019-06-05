@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/lbl_divider"
+        android:text="@string/lbl_inf_const" />
+
+    <TextView
+        style="@style/lbl_formulario"
+        android:text="@string/lbl_destino" />
+
+    <EditText android:id="@+id/txtDestino" style="@style/txt_formulario" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/lbl_formulario"
+            android:text="@string/lbl_nivel"
+            android:layout_weight="1"/>
+        <TextView
+            style="@style/lbl_formulario"
+            android:text="@string/lbl_habitaciones"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtNivel"
+            android:inputType="number"
+            style="@style/txt_formulario"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/txtHabitaciones"
+            android:inputType="number"
+            style="@style/txt_formulario"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/lbl_formulario"
+        android:text="@string/lbl_servicios" />
+
+    <EditText android:id="@+id/txtServicios"
+        style="@style/txt_formulario" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/lbl_formulario"
+            android:text="@string/lbl_categoria"
+            android:layout_weight="1"/>
+        <TextView
+            style="@style/lbl_formulario"
+            android:text="@string/lbl_estado"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Spinner android:id="@+id/spnCategoria"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginBottom="@dimen/margin_general"
+            style="@style/css_input_text"
+            android:layout_weight="1" />
+
+        <Spinner android:id="@+id/spnEstado"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/margin_general"
+            android:layout_marginBottom="@dimen/margin_general"
+            android:layout_height="@dimen/height_spinner"
+            style="@style/css_input_text"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            style="@style/lbl_formulario"
+            android:text="@string/lbl_area_edificada"
+            android:layout_weight="1"/>
+        <TextView
+            style="@style/lbl_formulario"
+            android:text="@string/lbl_anio"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtAreEdif"
+            android:inputType="numberDecimal"
+            style="@style/txt_formulario"
+            android:layout_weight="1" />
+        <EditText
+            android:id="@+id/txtAnio"
+            android:inputType="number"
+            style="@style/txt_formulario" android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/lbl_formulario"
+        android:text="@string/lbl_cubierta" />
+
+    <EditText android:id="@+id/txtCubierta"
+        style="@style/txt_formulario" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name_button_cancelar" />
+
+        <Button
+            android:id="@+id/btnGuardarConstruccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name_button_add" />
+    </LinearLayout>
+
+</LinearLayout>

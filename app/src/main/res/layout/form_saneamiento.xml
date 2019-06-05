@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:keepScreenOn="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:background="@drawable/background_action_bar"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_back_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/hover_button_back"
+                    android:contentDescription="@string/name_img"
+                    android:gravity="left" />
+
+                <TextView
+                    android:id="@+id/lbl_title_event"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="0.01"
+                    android:layout_gravity="left|center_vertical"
+                    android:textAppearance="@style/font_size_small"
+                    android:textColor="@color/white"
+                    android:text="@string/titulo_new_saneamiento"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:paddingBottom="80dp">
+
+                <TextView
+                    style="@style/css_label_section"
+                    android:layout_width="match_parent"
+                    android:text="@string/label_datos_generales" />
+
+                <include layout="@layout/fgm_form_registro_header" />
+
+                <EditText
+                    android:id="@+id/txtPadron"
+                    style="@style/css_input_text"
+                    android:layout_width="match_parent"
+                    android:hint="@string/hint_padron"
+                    android:imeOptions="actionNext"
+                    android:lines="1"
+                    android:maxLength="100" />
+
+                <TextView
+                    style="@style/css_label"
+                    android:layout_width="match_parent"
+                    android:text="@string/name_usuario_padron" />
+
+                <EditText
+                    android:id="@+id/txtNombreUsuario"
+                    style="@style/css_input_text"
+                    android:layout_width="match_parent"
+                    android:hint="@string/hint_nombre_usuario"
+                    android:imeOptions="actionNext"
+                    android:lines="1"
+                    android:maxLength="100" />
+
+                <EditText
+                    android:id="@+id/txtIdentServicio"
+                    style="@style/css_input_text"
+                    android:layout_width="match_parent"
+                    android:hint="@string/hint_ident_serv"
+                    android:imeOptions="actionNext"
+                    android:lines="1"
+                    android:maxLength="100" />
+
+                <TextView
+                    style="@style/css_label"
+                    android:layout_width="match_parent"
+                    android:text="@string/label_observacion_preliminar" />
+
+                <EditText
+                    android:id="@+id/txtObservacionPrel"
+                    style="@style/css_area_text"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_observacion_preliminar"
+                    android:imeOptions="actionNext"
+                    android:lines="3"
+                    android:maxLength="300" />
+
+                <TextView
+                    style="@style/css_label_section"
+                    android:layout_width="match_parent"
+                    android:text="@string/label_tipo_saneamiento" />
+
+                <Spinner
+                    android:id="@+id/lstSaneamiento"
+                    style="@style/css_spinner" />
+
+                <!-- tipo de saneamiento: Inspección previa de saneamiento -->
+                <LinearLayout
+                    android:id="@+id/pnlInpsPrev"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_tipo_conexion" />
+
+                    <RadioGroup
+                        android:id="@+id/rdGrpTipoConexion"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/rdGrpTipoConexionPrev"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_conexion_prevista" />
+
+                        <RadioButton
+                            android:id="@+id/rdGrpTipoConexionCam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_camara_vereda" />
+
+                        <RadioButton
+                            android:id="@+id/rdGrpTipoConexionColeCalle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_colector_calle" />
+
+                        <RadioButton
+                            android:id="@+id/rdGrpTipoConexionColeVereda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_colector_vereda" />
+
+                        <RadioButton
+                            android:id="@+id/rdGrpTipoConexionEfluente"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_efluente" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/pnlInstPrevSanTipCnx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/css_label"
+                            android:layout_width="match_parent"
+                            android:text="@string/label_ubicacion_limite" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:shrinkColumns="*"
+                            android:stretchColumns="*">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <EditText
+                                    android:id="@+id/txtULLadoIzquiero"
+                                    style="@style/css_input_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:hint="@string/hint_lado_izquierdo"
+                                    android:imeOptions="actionNext"
+                                    android:lines="1"
+                                    android:maxLength="100" />
+
+                                <EditText
+                                    android:id="@+id/txtULLadoDerecho"
+                                    style="@style/css_input_text"
+                                    android:layout_width="match_parent"
+                                    android:hint="@string/hint_lado_derecho"
+                                    android:imeOptions="actionNext"
+                                    android:lines="1"
+                                    android:maxLength="100" />
+                            </TableRow>
+                        </TableLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- corte en vereda -->
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_corte_vereda" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_label"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_empty" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_largo" />
+
+                            <TextView
+                                style="@style/css_label"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_empty" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_ancho" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_tierra" />
+
+                            <EditText
+                                android:id="@+id/txtCVTierraLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCVTierraAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_baldosa" />
+
+                            <EditText
+                                android:id="@+id/txtCVBaldosaLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCVBaldosaAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_hormigon" />
+
+                            <EditText
+                                android:id="@+id/txtCVHormigonLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCVHormigonAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_cesped" />
+
+                            <EditText
+                                android:id="@+id/txtCVCespedLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCVCespedAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/txtCVOtro"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:hint="@string/hint_otro"
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <EditText
+                                android:id="@+id/txtCVOtroLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCVOtroAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pnlEspPavAfectCalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/css_label"
+                            android:layout_width="match_parent"
+                            android:text="@string/label_esp_pav_ver" />
+
+                        <EditText
+                            android:id="@+id/txtCnxDomEspPavVer"
+                            style="@style/css_input_text"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:hint="@string/hint_en_vereda"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLength="100" />
+
+                    </LinearLayout>
+
+
+                    <!-- Corte en pavimento -->
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_corte_pavimento" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_label"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_empty" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_largo" />
+
+                            <TextView
+                                style="@style/css_label"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_empty" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_ancho" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_carpeta" />
+
+                            <EditText
+                                android:id="@+id/txtCPCarpetaLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCPCarpetaAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_riego" />
+
+                            <EditText
+                                android:id="@+id/txtCPRiegoLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCPRiegoAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_hormigon" />
+
+                            <EditText
+                                android:id="@+id/txtCPHormigonPvmtLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCPHormigonPvmtAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                style="@style/css_row_left"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_tosca" />
+
+                            <EditText
+                                android:id="@+id/txtCPToscaLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCPToscaAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <EditText
+                                android:id="@+id/txtCPOtroPvmt"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:hint="@string/hint_otro"
+                                android:imeOptions="actionNext"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <EditText
+                                android:id="@+id/txtCPOtroPvmtLargo"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:layout_marginRight="5dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+
+                            <TextView
+                                style="@style/css_row_header"
+                                android:layout_width="match_parent"
+                                android:text="@string/label_x" />
+
+                            <EditText
+                                android:id="@+id/txtCPOtroPvmtAncho"
+                                style="@style/css_input_text"
+                                android:layout_width="match_parent"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:hint="@string/hint_escriba_aqui"
+                                android:lines="1"
+                                android:maxLength="100" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pnlEspPavAfectPav"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/css_label"
+                            android:layout_width="match_parent"
+                            android:text="@string/label_esp_pav_pav" />
+
+                        <EditText
+                            android:id="@+id/txtCnxDomEspPav"
+                            style="@style/css_input_text"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:hint="@string/hint_en_pavimento"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:maxLength="100" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_prof_max_sifon" />
+
+                    <EditText
+                        android:id="@+id/txtProfMaxSifon"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_camara_pronta" />
+
+                    <RadioGroup
+                        android:id="@+id/rdGrpCmrPronta"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/optCmrProntaSi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_si" />
+
+                        <RadioButton
+                            android:id="@+id/optCmrProntaNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_no" />
+
+                        <RadioButton
+                            android:id="@+id/optCmrProntaEnProceso"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/label_en_proceso" />
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_ubicacion_camara" />
+
+                    <EditText
+                        android:id="@+id/txtUbicacionCamara"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_diametro_conexion" />
+
+                    <Spinner
+                        android:id="@+id/lstDiametroConexion"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_spinner"
+                        android:layout_marginRight="5dp"
+                        android:prompt="@string/name_citie" />
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_material_colector" />
+
+                    <Spinner
+                        android:id="@+id/lstMaterialColector"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_spinner"
+                        android:layout_marginRight="5dp"
+                        android:prompt="@string/name_citie" />
+
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_diametro_colector" />
+
+                    <Spinner
+                        android:id="@+id/lstDiametroColector"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_spinner"
+                        android:layout_marginRight="5dp"
+                        android:prompt="@string/name_citie" />
+
+                    <EditText
+                        android:id="@+id/txtDiametroColectorOtro"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_prof_colector" />
+
+                    <Spinner
+                        android:id="@+id/lstProfundidadColector"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_spinner"
+                        android:layout_marginRight="5dp"
+                        android:prompt="@string/name_citie" />
+
+                </LinearLayout>
+
+
+                <!-- tipo de saneamiento: Inspección de instalación interna -->
+                <LinearLayout
+                    android:id="@+id/pnlInspInstDom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/optCnxPluvial"
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_cnx_pluvial" />
+
+                    <Switch
+                        android:id="@+id/optCnxPbmNapa"
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_pbm_napa" />
+
+                    <Switch
+                        android:id="@+id/optDcgXBombeo"
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_dcg_x_bombeo" />
+
+                    <Switch
+                        android:id="@+id/optDcgIndustrial"
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/label_dcg_industrial" />
+
+                    <EditText
+                        android:id="@+id/txtTipoEfluente"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_tipo_efluente"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                    <EditText
+                        android:id="@+id/txtCnxInstIntSanOtros"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_otro"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                </LinearLayout>
+
+
+                <!-- tipo de saneamiento: Ejecución de conexión domiciliaria-->
+                <LinearLayout
+                    android:id="@+id/pnlEjecCnxDom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_tipo_suelo" />
+
+                    <EditText
+                        android:id="@+id/txtCnxDomTipoSuelo"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_interferencia" />
+
+                    <Spinner
+                        android:id="@+id/lstCnxDomIntereferencia"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_spinner"
+                        android:layout_marginRight="5dp"
+                        android:prompt="@string/name_citie" />
+
+                    <TextView
+                        style="@style/css_label"
+                        android:layout_width="match_parent"
+                        android:text="@string/label_otros" />
+
+                    <EditText
+                        android:id="@+id/txtCnxDomOtros"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                </LinearLayout>
+
+                <!-- tipo de saneamiento: Inspeccion saneamiento-->
+                <LinearLayout
+                    android:id="@+id/pnlInspSan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/lstInspSaneamiento"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent" />
+
+                    <EditText
+                        android:id="@+id/txtInspSaneamiento"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                </LinearLayout>
+
+                <!-- tipo de saneamiento: Otros -->
+                <LinearLayout
+                    android:id="@+id/pnlOtros"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtOtros"
+                        style="@style/css_input_text"
+                        android:layout_width="match_parent"
+                        android:hint="@string/hint_escriba_aqui"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLength="100" />
+
+                </LinearLayout>
+
+
+                <!-- SECCION: Fotos -->
+                <TextView
+                    style="@style/css_label_section"
+                    android:layout_width="match_parent"
+                    android:text="@string/name_foto" />
+
+                <LinearLayout xmlns:widget="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.uy.csi.sige.widget.HorizontalListView
+                        android:id="@+id/hlv"
+                        android:layout_width="0dp"
+                        android:layout_height="160dp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".05"
+                        android:background="@color/white"
+                        android:divider="@color/white"
+                        android:fadingEdgeLength="5dp"
+                        android:requiresFadingEdge="horizontal"
+                        widget:dividerWidth="1dp" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/margin_general"
+                        android:layout_marginRight="@dimen/margin_general"
+                        android:background="@drawable/hover_button_add_picture"
+                        android:contentDescription="@string/name_img" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <ImageButton
+        android:id="@+id/btnGuardarSaneamiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="@dimen/margin_padding_general"
+        android:layout_marginBottom="@dimen/margin_padding_general"
+        android:background="@drawable/hover_button_save_event"
+        android:contentDescription="@string/name_img" />
+</FrameLayout>
